@@ -1,0 +1,63 @@
+{
+  "categories": [
+    {
+      "id": "8972",
+      "name": "Restaurants",
+      "description": "Places to eat."
+    },
+    {
+      "name": "Malls",
+      "description": "Places to shop and sightsee",
+      "id": "97e8"
+    },
+    {
+      "id": "48d1",
+      "name": "Beaches",
+      "description": "Places to bathe"
+    },
+    {
+      "id": "e2e4",
+      "name": "Bars",
+      "description": "Drinking establishments."
+    },
+    {
+      "id": "cdc8",
+      "name": "Parks",
+      "description": "Places to play, relax, take the family, and picnic."
+    }
+  ],
+  "places": [
+    {
+      "id": "b3ac",
+      "name": "Bar do Zé",
+      "category": "Bars",
+      "location": "Salvador, Bahia, Brasil",
+      "photoUrl": "https://www.viajali.com.br/wp-content/uploads/2022/12/bares-em-salvador-00.png",
+      "rating": "4"
+    },
+    {
+      "id": "3899",
+      "name": "Praia do Espelho",
+      "category": "Beaches",
+      "location": "Curuípe, Bahia, Brasil",
+      "photoUrl": "https://www.melhoresdestinos.com.br/wp-content/uploads/2020/11/praia-do-espelho-capa2019.jpg",
+      "rating": "5"
+    },
+    {
+      "id": "75f2",
+      "name": "Parque Ibirapuera",
+      "category": "Parks",
+      "location": "São Paulo, São Paulo, Brasil",
+      "photoUrl": "https://parqueibirapuera.org/wp/wp-content/uploads/2016/03/RN-Ibirapuera-Aerea-20150121-5-1-foto-destacada-resized.jpg",
+      "rating": "4"
+    },
+    {
+      "id": "a432",
+      "name": "Playa de Máncora",
+      "category": "Beaches",
+      "location": "Máncora, Piura, Peru",
+      "photoUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/98/ec/9a/hotel-las-pocitas.jpg?w=900&h=500&s=1",
+      "rating": "3"
+    }
+  ]
+}
