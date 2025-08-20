@@ -1,0 +1,46 @@
+<!-- Filtros -->
+
+<form #frm="ngForm">
+    <div class="p-4 bg-white shadow">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+
+            <input 
+                type="text"
+                name="placeNameFilter"
+                [(ngModel)]="placeNameFilter"
+                placeholder="Search by place name"
+                class="w-full border border-gray-300 p-2 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+            />
+
+            <select 
+                name="categoryFilter"
+                [(ngModel)]="categoryFilter" 
+                class="bg-gray-100 w-full border border-gray-300 p-2 rounded shadow-sm focus:ring focus:ring-blue-400"
+                >
+                <option value="">All Categories</option>
+                <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+            </select>
+
+            <button (click)="filterByPlaceNameOrCategory()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">
+                Search
+            </button>
+
+        </div>
+    </div>
+</form>
+
+<!-- Listagem de lugares -->
+<div id="placeList" class="p-4 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white shadow rounded overflow-hidden" *ngFor="let place of places">
+        <img [src]="place.photoUrl" [alt]="place.name" class="w-full h-80 object-cover" />
+        <div class="p-4 ">
+            <h2 class="text-lg font-semibold">{{ place.name }}</h2>
+            <p class="text-gray-500">Category: <span class="text-blue-600">{{ place.category }}</span> </p>
+            <p class="text-gray-500">Location: <span class="text-blue-600">{{ place.location }}</span> </p>
+            <div class="mt-2 flex items-center">
+                <span class="text-blue-600" [innerHTML]="getStars(place)"></span>
+                <span class="ml-2 text-gray-600">{{ place.rating }}</span>
+            </div>
+        </div>
+    </div>
+</div>

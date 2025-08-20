@@ -1,5 +1,6 @@
 # app files
 cli-commands.txt
+tash pop stash@{0}
 
 # Compiled output
 /dist
