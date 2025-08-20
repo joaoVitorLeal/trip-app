@@ -7,10 +7,24 @@ const routes: Routes = [
   {
     path: '', // caminho de url
     component: LayoutComponent,
-    children: [ // Definindo as rotas filhas do LayoutComponent
+    children: [ // Definindo as rotas filhas (array) do LayoutComponent
       {
         path: 'categories',
-        loadChildren: () => import('../categories/categories.module').then(m => m.CategoriesModule)
+        loadChildren: () => import('../categories/categories.module').then(m => m.CategoriesModule),
+        pathMatch: 'full',
+        data: { title: 'Categories', subtitle: 'Register the new categories' } // Capturar eventos para definir título e subtítulo de cada página @See LayoutComponent & LayoutProps
+      },
+      {
+        path: 'places',
+        loadChildren: () => import('../places/places.module').then(m => m.PlacesModule),
+        pathMatch: 'full',
+        data: { title: 'Places', subtitle: 'Register the new places' }
+      },
+      {
+        path: 'gallery',
+        loadChildren: () => import('../gallery/gallery.module').then(m => m.GalleryModule),
+        pathMatch: 'full',
+        data: { title: 'Gallery', subtitle: 'Discover the perfect place for unforgettable moments' }
       }
     ]
   }
