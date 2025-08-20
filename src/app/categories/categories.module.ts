@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms'; // Para formulários reativos
 
 import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoryComponent } from './category/category.component';
@@ -11,7 +12,8 @@ import { CategoryComponent } from './category/category.component';
   ],
   imports: [
     CommonModule,
-    CategoriesRoutingModule
+    CategoriesRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CategoriesModule { }
